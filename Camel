@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int totalBananas = 3000, distance = 1000, capacity = 1000, consumedBananas = 0;
+    int temp = totalBananas;
+    while (distance--)
+    {
+        while (temp > 0)
+        {
+            temp -= capacity;
+            if (temp == 1)
+            {
+                consumedBananas -= 1;
+                
+            }
+            consumedBananas += 2;
+        }
+        consumedBananas -= 1;
+        temp = totalBananas - consumedBananas;
+        if (temp == 0)
+        break;
+        
+    }
+    cout << temp;
+    return 0;
+}
